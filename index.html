@@ -403,7 +403,7 @@
     margin-bottom: 20px;
     border-radius: 2px;
     white-space: pre;
-    overflow: hidden;
+    overflow: auto;
   }
   .code-kw { color: rgba(196,168,130,0.6); }
   .code-fn { color: rgba(245,240,232,0.5); }
@@ -584,21 +584,38 @@
     opacity: 1;
     transform: none;
   }
+  .featured-research {
+  grid-column: span 2;
+  background: #0f0e0a;
+  }
 
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
-    .hero-visual { display: none; }
-    section { padding: 60px 24px; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
-    .research-grid { grid-template-columns: 1fr; }
-    .exp-item { grid-template-columns: 1fr; gap: 8px; }
-    .honors-grid { grid-template-columns: 1fr 1fr; }
-    .skills-row { grid-template-columns: 1fr; }
-    nav { padding: 16px 24px; }
-    .nav-links { gap: 20px; }
-    footer { flex-direction: column; gap: 8px; }
-  }
+  .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
+  .hero-visual { display: none; }
+  section { padding: 60px 24px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card.featured { grid-column: span 1; }
+  
+  /* Research Card spanning  */
+  .research-grid { grid-template-columns: 1fr; }
+  .featured-research { grid-column: span 1; } 
+  
+  .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  .honors-grid { grid-template-columns: 1fr 1fr; }
+  .skills-row { grid-template-columns: 1fr; }
+  
+  /* Allows the Nav links to wrap neatly on tiny screens */
+  nav { padding: 16px 24px; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+/* Add an extra breakpoint for very small phones */
+@media (max-width: 500px) {
+  .honors-grid { grid-template-columns: 1fr; } /* Stacks honors 1 by 1 */
+  h1 { font-size: 42px; } /* Scales down the massive hero text slightly */
+}
 </style>
 </head>
 <body>
@@ -687,7 +704,7 @@
         <span class="tag">Cognitive Offloading</span>
       </div>
     </div>
-    <div class="research-card" style="grid-column: span 2; background: #0f0e0a;">
+    <div class="research-card featured-research">
       <span class="research-badge">Workshop · Instruction</span>
       <h3>Technical Workshop: "BERT &amp; BERTopic - From Raw Text to Research-Ready Topics"</h3>
       <p>
