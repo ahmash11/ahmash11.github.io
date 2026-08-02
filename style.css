@@ -53,7 +53,7 @@
   text-transform:uppercase; color:var(--color-accent); }
 .t-nav{ font-size:var(--text-xs); font-weight:var(--weight-regular); letter-spacing:var(--tracking-wider);
   text-transform:uppercase; color:var(--color-secondary); transition:color var(--duration-fast) var(--ease-in-out); }
-.t-nav:hover{ color:var(--color-primary); }
+.t-nav:hover, .t-nav.active { color:var(--color-primary); }
 .t-label{ font-size:var(--text-2xs); font-weight:var(--weight-medium); letter-spacing:var(--tracking-widest);
   text-transform:uppercase; color:var(--color-secondary); }
 .t-caption{ font-size:var(--text-sm); font-weight:var(--weight-light); letter-spacing:var(--tracking-normal);
