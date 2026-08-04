@@ -212,6 +212,8 @@ button{ border:0; font:inherit; background:none; color:inherit; cursor:none; }
 .g-note p{ font-size:var(--text-lg); font-weight:var(--weight-light); color:var(--color-secondary);
   line-height:var(--leading-relaxed); }
 
+.band-foot{ margin-top:var(--space-6); }
+
 .g-item{ position:relative; overflow:hidden; cursor:none; background:var(--color-surface);
   transition:box-shadow var(--duration-slow) var(--ease-out-expo), transform var(--duration-slow) var(--ease-out-expo); }
 @media (hover:none){ .g-item{ cursor:pointer; } }
